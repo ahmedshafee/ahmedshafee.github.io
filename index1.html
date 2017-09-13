@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html>
+ <title>CALLER</title> 
+      
+ <head>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+             
+
+                <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+           
+<style>
+           .header 
+           {
+             font-family: Arial
+           }
+           .wf-opensans-n4-active .header {
+             font-family: 'Open Sans'
+           }
+          
+
+
+#phonenumber 
+{
+    font-size:20px;
+    top: 50%;
+     left: 35%;
+    width: 100%;
+}
+
+form 
+{ 
+margin: 0 auto; 
+width:30%;
+}
+  div.container
+    {
+    width: 30%;
+    border: 1px solid gray;
+   }
+
+  header, footer {
+    padding: 1em;
+    color: white;
+    background-color: green;
+    clear: left;
+    text-align: center;
+                  }
+
+
+                  #headapp {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    overflow: hidden;
+                    background-color: #333333;
+                    width: 30%;
+                    margin: auto;                    
+                
+                }
+                
+                #headapp li {
+                    float: left;
+                   }
+                
+                   #headapp   li a {
+                    display: block;
+                    color: white;
+                    text-align: left;
+                    padding: 16px;
+                    text-decoration: none;
+                     
+                     border: none;
+                     -webkit-box-shadow:none;
+                     -moz-box-shadow:none;
+                      box-shadow:none;
+                      outline:none;
+                     cursor: pointer;     
+                     }
+                
+                #headapp  li a:hover 
+                {
+                    background-color: #111111;
+                }
+
+   
+
+input[type=text]  
+{
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    width: 30%;
+
+                 }
+
+input[type=text]:focus {
+    width: 30%;
+                    
+}
+
+#insertdetails1 {
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 7px 7px; 
+    background-repeat: no-repeat;
+    padding: 6px 14px 8px 30px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    width: 20%;
+                }
+
+    #insertdetails1 {
+    width: 20%;
+                    
+}
+
+
+    #insertdetails2 
+    {
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 7px 7px; 
+    background-repeat: no-repeat;
+    padding: 6px 14px 8px 30px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    width: 20%;
+
+                 }
+
+    #insertdetails2 {
+    width: 20%;
+                    
+}
+
+
+#BackGround{
+background-color: green;
+height: 10%;
+position: absolute;
+top:0;
+left: 0;
+width: 30%;
+}
+
+#Number1
+{
+     position:absolute;
+     transition: .5s ease;
+     top: 40%;
+     left: 35%;
+}
+#Number2
+{
+     position:absolute;
+     transition: .5s ease;
+     top: 40%;
+     left: 40%;
+}
+#Number3
+{
+     position:absolute;
+     transition: .5s ease;
+     top: 40%;
+     left: 45%;
+}
+#Number4
+{
+     position:absolute;
+     transition: .5s ease;
+     top: 48%;
+     left: 35%;
+}
+#Number5
+{
+     position:absolute;
+     transition: .5s ease;
+     top: 48%;
+     left: 40%;
+}
+#Number6
+{
+     position:absolute;
+     transition: .5s ease;
+     top: 48%;
+     left: 45%;
+}
+#Number7
+{
+     position:absolute;
+     transition: .5s ease;
+     top: 56%;
+     left: 35%;
+}
+#Number8
+{
+     position:absolute;
+     transition: .5s ease;
+     top: 56%;
+     left: 40%;
+}
+#Number9
+{
+     position:absolute;
+     transition: .5s ease;
+     top: 56%;
+     left: 45%;
+}
+#Number0
+{
+     position:absolute;
+     transition: .5s ease;
+     top: 64%;
+     left: 40%;
+
+}
+#Number10
+{
+     position:absolute;
+     transition: .5s ease;
+     top: 65%;
+     left: 46%;
+     width: 40px;
+     height: 40px;
+     font-size: 30px;
+     background-color: #3399ff;
+     color: white;
+     border-radius:50%;
+     cursor:pointer;
+
+
+}
+#Number11
+{
+     position:absolute;
+     transition: .5s ease;
+     top: 65%;
+     left: 36%;
+     width: 40px;
+     height: 40px;
+     font-size: 30px;
+     background-color: #3399ff;
+     color: white;
+     border-radius:50%;
+    cursor:pointer;
+
+}
+#EditeNumber
+{
+    position:absolute;
+    transition: .5s ease;
+    top: 40%;
+    left: 55.3%;
+}
+
+#Create 
+    {
+     position:absolute;
+     transition: .5s ease;
+     left: 56%;
+     top: 49%;
+     display: block;
+
+    }
+    #CreateFavorites
+    {
+     position:absolute;
+     transition: .5s ease;
+     left: 56%;
+     top: 56%;
+     display: block;
+
+    }
+
+#Cancel 
+    {
+     position:absolute;
+     transition: .5s ease;
+     top: 74%;
+     left: 41%;
+    display: none;
+    }
+
+#call{
+    position:absolute;
+     transition: .5s ease;
+     top: 74%;
+     left: 40%;
+}
+.button{
+    border:none;
+     -webkit-box-shadow:none ;
+     -moz-box-shadow:none;
+     box-shadow:none;
+     outline: none;
+     position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor:pointer;
+}
+
+.buttonS{
+    border:none;
+     -webkit-box-shadow:none ;
+     -moz-box-shadow:none;
+     box-shadow:none;
+     outline: none;
+     cursor:pointer;
+
+}
+.button:hover {background-color: yellow;}
+.button:active{
+    background-color: yellow;
+    box-shadow: 0 5px #666;
+    transform: translateY(2px)
+}
+
+
+#call:active{
+    box-shadow: 0 5px #666;
+    transform: translateY(2px)
+}
+
+#Cancel:active{
+    box-shadow: 0 5px #666;
+    transform: translateY(2px)
+}
+
+#Create:active{
+    box-shadow: 0 5px #666;
+    transform: translateY(2px)
+}
+#CreateFavorites:active{
+    box-shadow: 0 5px #666;
+    transform: translateY(2px)
+}
+
+.buttonS:after
+{
+    content: "";
+    background: #90EE90;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+
+}
+
+.buttonS:active::after
+{
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+#defualt{
+display: block;
+
+}
+#CONTACTS{
+    display: none;
+}
+
+#LOGS{
+    display: none;
+
+}
+#FAVOURITES{
+    display: none;
+ 
+}
+#CREATEDiv
+{
+    display: none;
+    margin: 0 auto; 
+    text-align: center;
+}
+
+#comboboxFav
+{
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    text-align: center;
+    width:30%;
+}
+#combobox
+{
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    text-align: center;
+    width:100%;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a.header {
+  background-color: #e2e2e2;
+  cursor: default;
+  font-weight: bold;
+
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+
+
+#myUL1 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL1 li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL1 li a.header1 {
+  background-color: #e2e2e2;
+  cursor: default;
+  color: green;
+  font-weight: bold;
+}
+
+#myUL1 li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+
+#myUL2 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL2 li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL2 li a.header {
+  background-color: #e2e2e2;
+  cursor: default;
+  color: blue;
+  font-weight: bold;
+
+}
+
+#myUL2 li a:hover:not(.header) {
+  background-color: #eee;
+}
+.insertdetails{
+    width: 20%;
+}
+
+#subimetbutton {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    
+    border: none;
+    -webkit-box-shadow:none;
+    -moz-box-shadow:none;
+    box-shadow:none;
+    outline:none;
+    cursor: pointer;
+
+}
+#subimetbutton:active{
+    box-shadow: 0 5px #666;
+    transform: translateY(2px)
+}
+
+#backgroundfullscreen
+{
+    background-image: url("BackGround.jpg");
+    height: 100%; 
+    
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+}
+
+
+</style>
+ </head>
+                
+
+ <body> 
+                       
+    <div id="backgroundfullscreen">
+    
+    
+       <div class="container">
+                                <header>
+                                    <h1>PHONE</h1>
+                                </header>
+                                   </div>
+               
+                  <ul id="headapp">
+                           <li><a href="#CALL" onclick="call()" >CALL</a></li>
+                           <li><a href="#CONTACTS" onclick="contact()" >CONTACTS</a></li>
+                           <li><a href="#FAVOURITES" onclick="favourites()" >FAVOURITES</a></li>
+                           <li><a href="#LOG" onclick="log()">LOG</a></li>
+                 </ul> 
+                        
+                 
+
+            <!-- The defualt about favourites  -->
+             <div id="defualt" >
+
+                  <!-- the display of the clicked  number  -->
+                    <form>
+                        <input type="text" id="phonenumber" name="numberphone" value="" onkeypress="return isNumberKey(event)"  title="Enter in a number"/>
+                    </form>
+               <div>
+
+              <input type="image" onclick="print(this)"  value="1"  id="Number1" class="button" src="Number1.jpg"  style="width:60px;height:60px;" >
+              <input type="image" onclick="print(this)"  value="2"  id="Number2" class="button" src="Number2.jpg"  style="width:60px;height:60px;" >              
+              <input type="image" onclick="print(this)" value="3"  id="Number3" class="button"  src="Number3.jpg"  style="width:60px;height:60px;">              
+              <input type="image" onclick="print(this)" value="4"  id="Number4" class="button"  src="Number4.jpg"  style="width:60px;height:60px;">              
+              <input type="image" onclick="print(this)" value="5" id="Number5" class="button"   src="Number5.jpg"  style="width:60px;height:60px;">              
+              <input type="image" onclick="print(this)" value="6" id="Number6" class="button"   src="Number6.jpg"  style="width:60px;height:60px;">              
+              <input type="image" onclick="print(this)" value="7" id="Number7" class="button"   src="Number7.jpg"  style="width:60px;height:60px;">              
+              <input type="image" onclick="print(this)" value="8"  id="Number8" class="button"  src="Number8.jpg"  style="width:60px;height:60px;">              
+              <input type="image" onclick="print(this)" value="9"  id="Number9" class="button"  src="Number9.jpg"  style="width:60px;height:60px;">              
+              <input type="image" onclick="print(this)" value="0"  id="Number0" class="button"  src="Number0.jpg"    style="width:60px;height:60px;"> 
+               </div>
+               
+              <input type="image" onclick="deleteNumber(this)" value=""  id="EditeNumber" class="button"  src="EditeNumber.png"  title="Edite" style="width:53px;height:50px;"/> 
+              <button id="Number10" type="button"   onclick="print(this)" value="#" class="input">#</button>   
+              <button id="Number11" type="button"    onclick="print(this)" value="*" class="input" >*</button>
+              <input type="image"  class="buttonS"  onclick="calling()"  id="call" src="Call.png" style="width:84px;height:88px;" title="CALL" />
+              <input type="image"   class="buttonS" onclick="Canceling()"   id="Cancel" src="Cancel.jpg"  style="width:80px;height:82px;">
+
+              <input type="image" class="buttonS"  onclick="Creating()" id="Create" src="AddContact.jpg"  style="width:40px;height:40px;" title="Create a new contact"/>
+              <input type="image" class="buttonS"  onclick="CreateFavorites()" id="CreateFavorites" src="Favorites.jpg"  style="width:40px;height:40px;" title="Create a new favorite contact"/>
+              
+              
+            </div>
+
+             <!-- The details about favourites  -->
+             <div id="CONTACTS" class="w3-container">
+
+                  <input type="text" class="fa fa-search" id="myInput" onkeyup="AutoCompleteSearch()" placeholder="Search for names.." title="Type in a name">
+                  <ul id="myUL">
+
+                    <li id="A" ><a href="#" class="header">A</a></li>
+                    <li  id="1" value="0547381735" onclick="ChangeStringToNumber(this)"><a href="#">Ahmed shafee</a></li>
+                
+                    <li id="B"><a href="#" class="header">B</a></li>
+                    <li id="2" value="000256722"><a href="#">Billy</a></li>
+                    <li id="3" value=""><a href="#">Bob</a></li>
+                  
+                    <li id="C"><a href="#" class="header">C</a></li>
+                    <li id="4"  value="03772342"><a href="#">Calvin</a></li>
+                    <li id="5"  value="03327633"><a href="#">Cindy</a></li>
+
+                  </ul>         
+        </div>
+
+        
+           <!-- The details about favourites  -->
+             <div id="LOGS" class="w3-container">
+                    
+                     <ul id="myUL1">
+
+                            <li><a href="#" class="header1" >CALLS</a></li>
+                            <li id="1"; value="1";><a href="#">0547381735</a></li>
+                            
+                     </ul>
+                        
+             </div>
+
+            <!-- The details about favourites  -->
+             <div id="FAVOURITES" class="w3-container">
+                    <ul id="myUL2">
+                            
+                                <li><a href="#" class="header" >FAVOURITES</a></li>
+                                <li id="1"; value="1";><a href="#">Ahmed shafee</a></li>
+                               
+                              </ul>
+             </div>
+
+             <div id="CREATEDiv">
+                 <p></p>
+                 <p><label> <b>First Name</b> </label> <input  id="insertdetails1" type="text" placeholder="enter fname"></p>
+                 <p><label><b> Last Name</b> </label>  <input  id="insertdetails2" type="text" placeholder="enter lname"></p>
+                      
+                 <button type="button" onclick="CreatContact()" id="subimetbutton">subimet</button>
+                </div>  
+             
+             
+
+             <script src="jscode.js"></script>
+
+            <!-- audio link  -->
+
+            </div>
+         </body>
+</html>
+
+
+
+
